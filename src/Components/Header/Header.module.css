@@ -1,9 +1,11 @@
 .nav{
-    padding:2% 5%;
     background-color: brown;
+    color: #fff;
     display: flex;
     justify-content: space-between;
-    color:white;
+    padding: 2% 5%;
+    align-items: center;
+
 }
 
 .cartBtn{

@@ -6,6 +6,7 @@
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
-    width:60%;
+    width: 95%;
+    max-width: 50rem;
     margin-top:20px;
 }

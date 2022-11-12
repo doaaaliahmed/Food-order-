@@ -6,7 +6,8 @@
     -o-border-radius: 20px;
     outline: none;
     border:none;
-    width:12rem;
+    width: 100%;
+    max-width: 10rem;
     height: 3rem;
     cursor: pointer;
 }
