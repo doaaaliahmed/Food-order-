@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import style from './App.module.css';
+import Header from "./Components/Header/Header";
+import Menu from "./Components/Menu/Menu";
+import React from 'react';
+import Modal from './Components/Modal/Modal';
+import {useState} from 'react';
+import CartProvider from './store/CartProvider';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+const [isShownCart, setIsShownCart] = useState(false);
+
+const showCart = ()=>{
+  setIsShownCart(true);
 }
+
+const hideCart = ()=>{
+  setIsShownCart(false)
+}
+  return (
+    <CartProvider>
+    <Header onConfirm = {showCart}/>
+    <main className={style.main}> 
+    <Menu/>
+    </main>
+   { isShownCart && <Modal onConfirm={hideCart}/>}
+    </CartProvider>
+  );
+};
 
 export default App;

@@ -1,0 +1,11 @@
+.container{
+    background-color: white ;
+    border-radius: 20px;
+    padding:10px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    width:60%;
+    margin-top:20px;
+}
